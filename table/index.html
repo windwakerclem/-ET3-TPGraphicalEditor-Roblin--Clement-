@@ -1,0 +1,26 @@
+{% extends 'table/base.html' %}
+{% block body %}
+    <table id = "table" class = "table table-bordered">
+        <thead class = "alert-success">
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+                <th>Explanation</th>
+                <th>Recommandations</th>
+                <th>Severity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for Syslog in all_syslogs %}
+            <tr>
+                <td>{{ member.tag }}</td>
+                <td>{{ member.description }}</td>
+                <td>{{ member.explanation }}</td>
+                <td>{{ member.recommandations }}</td>
+                <td>{{ member.severity }}</td>
+            </tr>
+           {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
